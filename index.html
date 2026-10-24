@@ -7,15 +7,15 @@
   <!-- Primary Meta Tags -->
   <title>Jagannath Nayak | 3D Interactive Portfolio & AI/Full-Stack Engineer</title>
   <meta name="title" content="Jagannath Nayak | 3D Interactive Portfolio & AI/Full-Stack Engineer">
-  <meta name="description" content="Portfolio of Jagannath Nayak — Software Engineering Intern at Mphasis, Computer Science & Design undergraduate at KSIT, National Hackathon Winner, and AI/ML & Full-Stack Developer.">
-  <meta name="keywords" content="Jagannath Nayak, Portfolio, 3D WebGL, Mphasis Intern, KSIT, AI ML Engineer, Full Stack Developer, Python, Java, RAG, MentorGPT">
+  <meta name="description" content="Portfolio of Jagannath Nayak — Software Engineering Intern at Mphasis, Computer Science & Design undergraduate at KSIT, National Hackathon Winner, and creator of CodeBrain.">
+  <meta name="keywords" content="Jagannath Nayak, Portfolio, 3D WebGL, Mphasis Intern, KSIT, CodeBrain, AI ML Engineer, Full Stack Developer, Python, Java, RAG">
   <meta name="author" content="Jagannath Nayak">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://github.com/jagannath2908">
   <meta property="og:title" content="Jagannath Nayak | 3D Interactive Portfolio">
-  <meta property="og:description" content="Software Engineering Intern at Mphasis | National Hackathon Winner | AI/ML & Full Stack Developer">
+  <meta property="og:description" content="Software Engineering Intern at Mphasis | National Hackathon Winner | Creator of CodeBrain">
   <meta property="og:image" content="assets/profile_card.jpg">
 
   <!-- Favicon -->
@@ -56,20 +56,30 @@
       </ul>
 
       <div class="nav-actions">
-        <!-- Procedural Sci-Fi Sound FX Toggle -->
+        <!-- "Hire Me / Create Website" Button -->
+        <button class="btn-hire-me" onclick="openProposalModal()" title="Hire Jagannath or Request a Website">
+          <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+          <span>Hire Me</span>
+        </button>
+
+        <!-- Official GitHub Logo Button -->
+        <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="icon-btn github-btn" title="GitHub: @jagannath2908" aria-label="GitHub Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+
+        <!-- Official LinkedIn Logo Button -->
+        <a href="https://linkedin.com/in/jagannath-nayak" target="_blank" rel="noopener noreferrer" class="icon-btn linkedin-btn" title="LinkedIn: @jagannath-nayak" aria-label="LinkedIn Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.225 0z"/>
+          </svg>
+        </a>
+
+        <!-- Procedural Audio FX Toggle -->
         <button id="audio-toggle-btn" class="icon-btn" title="Toggle Procedural Audio FX" aria-label="Toggle Audio">
           <i data-lucide="volume-x"></i>
         </button>
-
-        <!-- Direct GitHub Link -->
-        <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub Profile: @jagannath2908">
-          <i data-lucide="github"></i>
-        </a>
-
-        <!-- Direct LinkedIn Link -->
-        <a href="https://linkedin.com/in/jagannath-nayak" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn: @jagannath-nayak">
-          <i data-lucide="linkedin"></i>
-        </a>
 
         <!-- Resume Modal CTA -->
         <button class="btn-primary-sm" onclick="openResumeModal()">
@@ -109,31 +119,45 @@
             
             <div class="hero-dynamic-role">
               <span>I engineer</span>
-              <span class="role-switcher" id="dynamic-role-text">Software Systems</span>
+              <span class="role-switcher" id="dynamic-role-text">Intelligent Systems</span>
             </div>
 
             <p class="hero-bio">
-              Computer Science & Design undergraduate at <strong>K S Institute of Technology</strong> with a strong foundation in programming, software engineering, and problem solving, complemented by practical <strong>UI/UX product design</strong> principles. Proficient in <strong>Python, Java, AI/ML, and Full-Stack development</strong> with a passion for building high-impact real-world systems.
+              Computer Science & Design undergraduate at <strong>K S Institute of Technology</strong> with practical UI/UX design mastery. Proficient in <strong>Python, Java, AI/ML (RAG & LLMs), and Full-Stack systems</strong>. Creator of <strong>CodeBrain</strong> (Final Year Project) and National Hackathon Winner.
             </p>
 
             <div class="hero-actions">
-              <a href="#projects" class="btn-primary">
-                <span>View Projects</span>
-                <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i>
+              <!-- Hire Me / Website Making Button -->
+              <button class="btn-primary" onclick="openProposalModal()" style="background: linear-gradient(135deg, #10b981, #00f2fe);">
+                <i data-lucide="briefcase" style="width: 18px; height: 18px;"></i>
+                <span>Hire Me / Create a Website</span>
+              </button>
+
+              <!-- Final Year Project Quick Link -->
+              <a href="https://codebrain-dev.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
+                <i data-lucide="globe" style="width: 18px; height: 18px;"></i>
+                <span>CodeBrain Live App ↗</span>
               </a>
 
-              <a href="#achievements" class="btn-secondary">
-                <i data-lucide="trophy" style="width: 18px; height: 18px; color: #fbbf24;"></i>
-                <span>Hackathon Wins</span>
-              </a>
+              <!-- Direct Gmail Compose Button -->
+              <button class="btn-secondary" onclick="openGmailCompose('Inquiry for Jagannath Nayak', 'Hi Jagannath,%0D%0A%0D%0AI came across your portfolio and would like to connect regarding...')">
+                <i data-lucide="mail" style="width: 18px; height: 18px; color: #ea4335;"></i>
+                <span>Get In Touch (Gmail)</span>
+              </button>
 
-              <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                <i data-lucide="github" style="width: 18px; height: 18px;"></i>
+              <!-- Official GitHub Brand Button -->
+              <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="btn-brand github" title="Visit GitHub Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
                 <span>GitHub</span>
               </a>
 
-              <a href="https://linkedin.com/in/jagannath-nayak" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                <i data-lucide="linkedin" style="width: 18px; height: 18px; color: #38bdf8;"></i>
+              <!-- Official LinkedIn Brand Button -->
+              <a href="https://linkedin.com/in/jagannath-nayak" target="_blank" rel="noopener noreferrer" class="btn-brand linkedin" title="Visit LinkedIn Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.225 0z"/>
+                </svg>
                 <span>LinkedIn</span>
               </a>
             </div>
@@ -149,8 +173,8 @@
                 <span class="stat-label">Active Internship</span>
               </div>
               <div class="quick-stat">
-                <span class="stat-value">5+</span>
-                <span class="stat-label">Production Apps</span>
+                <span class="stat-value" style="color: #34d399;">CodeBrain</span>
+                <span class="stat-label">Final Year Project</span>
               </div>
             </div>
           </div>
@@ -224,7 +248,7 @@
           </div>
           <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
           <p class="section-desc">
-            Bridging academic rigor at KS Institute of Technology with real-world engineering at Mphasis.
+            Bridging academic rigor at KS Institute of Technology with enterprise engineering at Mphasis.
           </p>
         </div>
 
@@ -348,16 +372,20 @@
           <button class="filter-btn" data-filter="iot">IoT & Embedded</button>
         </div>
 
-        <!-- Dynamic Projects Grid -->
+        <!-- Dynamic Projects Grid (Includes CodeBrain Flagship) -->
         <div id="projects-grid" class="projects-grid">
-          <!-- Populated by js/main.js -->
+          <!-- Populated dynamically by js/main.js -->
         </div>
 
-        <div style="text-align: center; margin-top: 3.5rem;">
-          <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-            <i data-lucide="github" style="width: 18px; height: 18px;"></i>
-            <span>Explore More on GitHub (@jagannath2908)</span>
-            <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+        <div style="text-align: center; margin-top: 3.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://codebrain-dev.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: linear-gradient(135deg, #10b981, #00f2fe);">
+            <i data-lucide="globe" style="width: 18px; height: 18px;"></i>
+            <span>Open CodeBrain Deployed App ↗</span>
+          </a>
+
+          <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="btn-brand github">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>Explore All GitHub Repos</span>
           </a>
         </div>
 
@@ -402,7 +430,6 @@
               Developed an <strong>AI-driven wardroom automation and wound analysis system</strong> combining IoT telemetry with deep learning vision to accurately segment wounds and track healing rates for enhanced patient recovery.
             </p>
 
-            <!-- Interactive Certificate Box -->
             <div class="cert-preview-box" onclick="openCertModal('hackfusion')">
               <img src="assets/cert_hackfusion.png" alt="MIIT Hack Fusion 1.0 First Place Certificate" class="cert-preview-img">
               <div class="cert-preview-overlay">
@@ -444,7 +471,6 @@
               Engineered an <strong>adaptive AI-based automated quiz generator</strong> with live intelligent scoring. Recognized with a prestigious 2–4 month industry internship offer at Dyashin Technosoft.
             </p>
 
-            <!-- Interactive Certificate Box -->
             <div class="cert-preview-box" onclick="openCertModal('hire4thon')">
               <img src="assets/cert_hire4thon.jpg" alt="HIRE-4-THON Runner-up Certificate" class="cert-preview-img">
               <div class="cert-preview-overlay">
@@ -489,7 +515,6 @@
 
         <div class="skills-grid">
           
-          <!-- Category 1: Languages & Core -->
           <div class="skill-category-card">
             <div class="skill-cat-header">
               <div class="skill-cat-icon icon-cyan">
@@ -522,7 +547,6 @@
             </div>
           </div>
 
-          <!-- Category 2: AI / ML & Intelligent Systems -->
           <div class="skill-category-card">
             <div class="skill-cat-header">
               <div class="skill-cat-icon icon-purple">
@@ -555,7 +579,6 @@
             </div>
           </div>
 
-          <!-- Category 3: Databases & Backend -->
           <div class="skill-category-card">
             <div class="skill-cat-header">
               <div class="skill-cat-icon icon-emerald">
@@ -588,7 +611,6 @@
             </div>
           </div>
 
-          <!-- Category 4: Tools, DevOps & UI/UX -->
           <div class="skill-category-card">
             <div class="skill-cat-header">
               <div class="skill-cat-icon icon-amber">
@@ -613,10 +635,10 @@
               </div>
               <div class="skill-row">
                 <div class="skill-name-bar">
-                  <span class="skill-name">CI/CD & Cloud Deployment (Render)</span>
+                  <span class="skill-name">CI/CD & Cloud Deployment (Vercel/Render)</span>
                   <span class="skill-level-text">DevOps</span>
                 </div>
-                <div class="progress-track"><div class="progress-fill fill-amber" style="width: 80%;"></div></div>
+                <div class="progress-track"><div class="progress-fill fill-amber" style="width: 82%;"></div></div>
               </div>
             </div>
           </div>
@@ -660,18 +682,18 @@
     </section>
 
     <!-- ==========================================================================
-         Contact Section
+         Contact Section & Direct Channels
          ========================================================================== -->
     <section id="contact" class="contact-section">
       <div class="container">
         
         <div class="section-header">
           <div class="section-badge">
-            <i data-lucide="mail" style="width: 14px; height: 14px;"></i> Get In Touch
+            <i data-lucide="mail" style="width: 14px; height: 14px;"></i> Get In Touch With Me
           </div>
           <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
           <p class="section-desc">
-            Currently open to opportunities in Software Development, AI/ML Engineering, and UI/UX Design.
+            Click to send an email directly to my Gmail, transmit an instant phone message, or propose a project.
           </p>
         </div>
 
@@ -679,54 +701,58 @@
           
           <!-- Channels -->
           <div class="contact-card">
-            <h3 style="font-size: 1.45rem; color: #fff; margin-bottom: 0.5rem;">Connect Directly</h3>
+            <h3 style="font-size: 1.45rem; color: #fff; margin-bottom: 0.5rem;">Direct Channels</h3>
             <p style="color: var(--text-muted); font-size: 0.95rem;">
-              Feel free to reach out via email, phone, LinkedIn, or explore my code on GitHub.
+              Click below to compose directly in Gmail, message on WhatsApp/SMS, or explore my work on GitHub & LinkedIn.
             </p>
 
             <div class="contact-channels">
               
-              <!-- GitHub -->
-              <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="channel-link">
-                <div class="channel-icon">
-                  <i data-lucide="github"></i>
+              <!-- Direct Gmail Link with recipient already assigned -->
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jagannathnayak865@gmail.com&su=Project%20Inquiry%20/%20Opportunity" target="_blank" rel="noopener noreferrer" class="channel-link gmail-link" title="Compose directly in Gmail">
+                <div class="channel-icon" style="color: #ea4335;">
+                  <i data-lucide="mail"></i>
                 </div>
                 <div class="channel-info">
-                  <span class="channel-label">GitHub Repository Hub</span>
+                  <span class="channel-label">Direct Gmail (To: Assigned)</span>
+                  <span class="channel-value">jagannathnayak865@gmail.com ↗</span>
+                </div>
+              </a>
+
+              <!-- Direct Phone / SMS Instant Alert Channel (Number Hidden) -->
+              <a href="javascript:void(0)" onclick="triggerDirectMobilePing()" class="channel-link whatsapp-link" title="Send Direct Mobile SMS Alert">
+                <div class="channel-icon" style="color: #25d366;">
+                  <i data-lucide="smartphone"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">Direct Mobile SMS Channel</span>
+                  <span class="channel-value">🔒 Direct Mobile Ping (Click to Alert) ↗</span>
+                </div>
+              </a>
+
+              <!-- Official GitHub Logo Channel -->
+              <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="channel-link">
+                <div class="channel-icon" style="color: #ffffff;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">Official GitHub Hub</span>
                   <span class="channel-value">github.com/jagannath2908</span>
                 </div>
               </a>
 
-              <!-- LinkedIn -->
+              <!-- Official LinkedIn Logo Channel -->
               <a href="https://linkedin.com/in/jagannath-nayak" target="_blank" rel="noopener noreferrer" class="channel-link">
-                <div class="channel-icon" style="color: #38bdf8;">
-                  <i data-lucide="linkedin"></i>
+                <div class="channel-icon" style="color: #0a66c2;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.225 0z"/>
+                  </svg>
                 </div>
                 <div class="channel-info">
-                  <span class="channel-label">LinkedIn Network</span>
+                  <span class="channel-label">Official LinkedIn Profile</span>
                   <span class="channel-value">linkedin.com/in/jagannath-nayak</span>
-                </div>
-              </a>
-
-              <!-- Email -->
-              <a href="mailto:jagannathnayak865@gmail.com" class="channel-link">
-                <div class="channel-icon" style="color: #34d399;">
-                  <i data-lucide="mail"></i>
-                </div>
-                <div class="channel-info">
-                  <span class="channel-label">Direct Email</span>
-                  <span class="channel-value">jagannathnayak865@gmail.com</span>
-                </div>
-              </a>
-
-              <!-- Phone -->
-              <a href="tel:+916291884501" class="channel-link">
-                <div class="channel-icon" style="color: #fbbf24;">
-                  <i data-lucide="phone"></i>
-                </div>
-                <div class="channel-info">
-                  <span class="channel-label">Phone / WhatsApp</span>
-                  <span class="channel-value">+91 6291884501</span>
                 </div>
               </a>
 
@@ -744,11 +770,11 @@
             </div>
           </div>
 
-          <!-- Message Form -->
+          <!-- Message Form with Email + Phone Notification -->
           <div class="contact-card">
-            <h3 style="font-size: 1.45rem; color: #fff; margin-bottom: 0.5rem;">Send a Direct Message</h3>
+            <h3 style="font-size: 1.45rem; color: #fff; margin-bottom: 0.5rem;">Send Message & Alert Phone</h3>
             <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-              Have a question or collaboration proposal? Send a note below.
+              Submitting sends an email to <strong>jagannathnayak865@gmail.com</strong> and transmits a direct SMS alert to my phone.
             </p>
 
             <form id="portfolio-contact-form" class="contact-form">
@@ -764,17 +790,25 @@
 
               <div class="form-group">
                 <label for="contact-subject" class="form-label">Subject</label>
-                <input type="text" id="contact-subject" required class="form-input" placeholder="Internship / Project Collaboration / Inquiry">
+                <input type="text" id="contact-subject" required class="form-input" placeholder="Website Project / Internship / Proposal">
               </div>
 
               <div class="form-group">
                 <label for="contact-message" class="form-label">Message</label>
-                <textarea id="contact-message" required class="form-textarea" placeholder="Hi Jagannath, I'd like to discuss..."></textarea>
+                <textarea id="contact-message" required class="form-textarea" placeholder="Hi Jagannath, I'd like to work with you on..."></textarea>
+              </div>
+
+              <!-- Instant Phone Alert Checkbox -->
+              <div class="notification-toggle-box">
+                <input type="checkbox" id="contact-phone-alert" checked>
+                <label for="contact-phone-alert" style="cursor: pointer;">
+                  <strong>⚡ Direct SMS Alert:</strong> Transmit instant SMS alert to my personal phone
+                </label>
               </div>
 
               <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
                 <i data-lucide="send" style="width: 18px; height: 18px;"></i>
-                <span>Transmit Message</span>
+                <span>Transmit Message (Email & Direct Phone SMS)</span>
               </button>
             </form>
           </div>
@@ -799,15 +833,22 @@
       </div>
 
       <div class="footer-socials">
-        <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub">
-          <i data-lucide="github"></i>
+        <!-- Official GitHub Logo -->
+        <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="icon-btn github-btn" title="GitHub Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         </a>
-        <a href="https://linkedin.com/in/jagannath-nayak" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn">
-          <i data-lucide="linkedin"></i>
+
+        <!-- Official LinkedIn Logo -->
+        <a href="https://linkedin.com/in/jagannath-nayak" target="_blank" rel="noopener noreferrer" class="icon-btn linkedin-btn" title="LinkedIn Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.225 0z"/></svg>
         </a>
-        <a href="mailto:jagannathnayak865@gmail.com" class="icon-btn" title="Email">
+
+        <!-- Gmail Direct Compose -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jagannathnayak865@gmail.com" target="_blank" rel="noopener noreferrer" class="icon-btn" title="Send Email via Gmail">
           <i data-lucide="mail"></i>
         </a>
+
+        <!-- Back to Top -->
         <a href="#hero" class="icon-btn" title="Back to top">
           <i data-lucide="arrow-up"></i>
         </a>
@@ -816,9 +857,98 @@
   </footer>
 
   <!-- ==========================================================================
-       Modals: Project Detail, Certificate Zoom, Resume Viewer
+       Modals: Project Detail, Certificate Zoom, Resume Viewer, Work Proposal
        ========================================================================== -->
-  <!-- Project Modal -->
+  <!-- 1. Work Proposal & Website Request Modal -->
+  <div id="proposal-modal" class="modal-overlay" onclick="if(event.target === this) closeAllModals()">
+    <div class="modal-container" style="max-width: 820px;">
+      <button class="modal-close-btn" onclick="closeAllModals()" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div style="text-align: center; margin-bottom: 1.75rem;">
+        <div class="section-badge" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #34d399;">
+          <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i> Collaboration & Website Request
+        </div>
+        <h2 style="font-size: 2rem; color: #fff; font-weight: 800; margin-top: 0.4rem;">Let's Build Your Project</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 580px; margin: 0.5rem auto 0;">
+          Need a website built, an AI application, or UI/UX design? Describe your requirements below and it will be delivered directly to my email and phone.
+        </p>
+      </div>
+
+      <form id="work-proposal-form" class="contact-form">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="proposal-name" class="form-label">Your Name / Organization *</label>
+            <input type="text" id="proposal-name" required class="form-input" placeholder="e.g. Sarah Mitchell / TechCorp">
+          </div>
+          <div class="form-group">
+            <label for="proposal-email" class="form-label">Email Address *</label>
+            <input type="email" id="proposal-email" required class="form-input" placeholder="e.g. sarah@company.com">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="proposal-phone" class="form-label">Your Phone / WhatsApp Number</label>
+            <input type="tel" id="proposal-phone" class="form-input" placeholder="+91 98765 43210">
+          </div>
+          <div class="form-group">
+            <label for="proposal-type" class="form-label">Type of Work Needed *</label>
+            <select id="proposal-type" required class="form-select">
+              <option value="Custom Website / Modern Landing Page">Custom Website / Modern Landing Page</option>
+              <option value="Full-Stack Web Application">Full-Stack Web Application (Flask / React / PostgreSQL)</option>
+              <option value="AI / LLM Integration (RAG, Chatbots)">AI / LLM Integration (RAG, Chatbots, Agents)</option>
+              <option value="UI/UX & Product Design">UI/UX & Product Prototype Design</option>
+              <option value="IoT / Embedded Healthcare System">IoT / Embedded Healthcare System</option>
+              <option value="Other Consulting / Freelance Project">Other Work Proposal / Freelance Contract</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="proposal-budget" class="form-label">Estimated Budget Range</label>
+            <select id="proposal-budget" class="form-select">
+              <option value="Under ₹15,000 / $200">Under ₹15,000 / ~$200</option>
+              <option value="₹15,000 – ₹50,000 / $200–$600" selected>₹15,000 – ₹50,000 / $200–$600</option>
+              <option value="₹50,000 – ₹1,50,000 / $600–$1,800">₹50,000 – ₹1,50,000 / $600–$1,800</option>
+              <option value="₹1,50,000+ / $1,800+">₹1,50,000+ / $1,800+</option>
+              <option value="Flexible / To be discussed">Flexible / To be discussed</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="proposal-timeline" class="form-label">Desired Timeline</label>
+            <select id="proposal-timeline" class="form-select">
+              <option value="Urgent (< 1-2 weeks)">Urgent (&lt; 1-2 weeks)</option>
+              <option value="Standard (2-4 weeks)" selected>Standard (2-4 weeks)</option>
+              <option value="Long Term (1-3 months)">Long Term (1-3 months)</option>
+              <option value="Flexible">Flexible</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="proposal-details" class="form-label">Project Scope & Requirements *</label>
+          <textarea id="proposal-details" required class="form-textarea" placeholder="Tell me about what you want to build, key features, reference links, and goals..."></textarea>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+          <button type="submit" class="btn-primary" style="flex: 1; justify-content: center; background: linear-gradient(135deg, #10b981, #00f2fe);">
+            <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+            <span>Submit Proposal & Alert Jagannath</span>
+          </button>
+          
+          <button type="button" class="btn-secondary" onclick="closeAllModals()">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Project Modal -->
   <div id="project-modal" class="modal-overlay" onclick="if(event.target === this) closeAllModals()">
     <div class="modal-container">
       <button class="modal-close-btn" onclick="closeAllModals()" aria-label="Close modal">
@@ -828,7 +958,7 @@
     </div>
   </div>
 
-  <!-- Certificate Modal -->
+  <!-- 3. Certificate Modal -->
   <div id="cert-modal" class="modal-overlay" onclick="if(event.target === this) closeAllModals()">
     <div class="modal-container" style="max-width: 820px;">
       <button class="modal-close-btn" onclick="closeAllModals()" aria-label="Close modal">
@@ -838,7 +968,7 @@
     </div>
   </div>
 
-  <!-- Resume Modal -->
+  <!-- 4. Resume Modal -->
   <div id="resume-modal" class="modal-overlay" onclick="if(event.target === this) closeAllModals()">
     <div class="modal-container" style="max-width: 840px;">
       <button class="modal-close-btn" onclick="closeAllModals()" aria-label="Close modal">
