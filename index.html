@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Jagannath Nayak | 3D Interactive Portfolio & AI/Full-Stack Engineer</title>
+  <meta name="title" content="Jagannath Nayak | 3D Interactive Portfolio & AI/Full-Stack Engineer">
+  <meta name="description" content="Portfolio of Jagannath Nayak — Software Engineering Intern at Mphasis, Computer Science & Design undergraduate at KSIT, National Hackathon Winner, and AI/ML & Full-Stack Developer.">
+  <meta name="keywords" content="Jagannath Nayak, Portfolio, 3D WebGL, Mphasis Intern, KSIT, AI ML Engineer, Full Stack Developer, Python, Java, RAG, MentorGPT">
+  <meta name="author" content="Jagannath Nayak">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/jagannath2908">
+  <meta property="og:title" content="Jagannath Nayak | 3D Interactive Portfolio">
+  <meta property="og:description" content="Software Engineering Intern at Mphasis | National Hackathon Winner | AI/ML & Full Stack Developer">
+  <meta property="og:image" content="assets/profile_card.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/profile_avatar.jpg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 3D WebGL Background Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Video Warp Speed Transition Canvas -->
+  <canvas id="warp-canvas"></canvas>
+
+  <!-- Ambient Glow and Cyber Grid Overlay -->
+  <div class="ambient-glow"></div>
+  <div class="cyber-grid-overlay"></div>
+
+  <!-- ==========================================================================
+       Header & Floating Navigation Pill
+       ========================================================================== -->
+  <header class="site-header">
+    <nav class="nav-pill" aria-label="Main Navigation">
+      <a href="#hero" class="brand-badge">
+        <img src="assets/profile_avatar.jpg" alt="Jagannath Nayak Avatar" class="brand-avatar">
+        <span>JN<span class="gradient-text">.dev</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Procedural Sci-Fi Sound FX Toggle -->
+        <button id="audio-toggle-btn" class="icon-btn" title="Toggle Procedural Audio FX" aria-label="Toggle Audio">
+          <i data-lucide="volume-x"></i>
+        </button>
+
+        <!-- Direct GitHub Link -->
+        <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub Profile: @jagannath2908">
+          <i data-lucide="github"></i>
+        </a>
+
+        <!-- Direct LinkedIn Link -->
+        <a href="https://linkedin.com/in/jagannath-nayak" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn: @jagannath-nayak">
+          <i data-lucide="linkedin"></i>
+        </a>
+
+        <!-- Resume Modal CTA -->
+        <button class="btn-primary-sm" onclick="openResumeModal()">
+          <i data-lucide="file-text" style="width: 14px; height: 14px;"></i>
+          <span>Resume</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-nav-toggle" class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text & Content -->
+          <div class="hero-content">
+            <!-- Active Intern at Mphasis Badge -->
+            <div class="status-pill">
+              <div class="status-indicator">
+                <div class="status-ring"></div>
+                <div class="status-dot"></div>
+              </div>
+              <span>Currently Software Engineering Intern @ <strong>Mphasis</strong></span>
+            </div>
+
+            <p class="hero-greeting">// Hello World, I am</p>
+            <h1 class="hero-name">Jagannath <span class="gradient-text">Nayak</span></h1>
+            
+            <div class="hero-dynamic-role">
+              <span>I engineer</span>
+              <span class="role-switcher" id="dynamic-role-text">Software Systems</span>
+            </div>
+
+            <p class="hero-bio">
+              Computer Science & Design undergraduate at <strong>K S Institute of Technology</strong> with a strong foundation in programming, software engineering, and problem solving, complemented by practical <strong>UI/UX product design</strong> principles. Proficient in <strong>Python, Java, AI/ML, and Full-Stack development</strong> with a passion for building high-impact real-world systems.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn-primary">
+                <span>View Projects</span>
+                <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i>
+              </a>
+
+              <a href="#achievements" class="btn-secondary">
+                <i data-lucide="trophy" style="width: 18px; height: 18px; color: #fbbf24;"></i>
+                <span>Hackathon Wins</span>
+              </a>
+
+              <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                <i data-lucide="github" style="width: 18px; height: 18px;"></i>
+                <span>GitHub</span>
+              </a>
+
+              <a href="https://linkedin.com/in/jagannath-nayak" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                <i data-lucide="linkedin" style="width: 18px; height: 18px; color: #38bdf8;"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+
+            <!-- Quick Metrics -->
+            <div class="hero-quick-stats">
+              <div class="quick-stat">
+                <span class="stat-value gradient-gold">1st Place</span>
+                <span class="stat-label">National Hackathon</span>
+              </div>
+              <div class="quick-stat">
+                <span class="stat-value gradient-text">Mphasis</span>
+                <span class="stat-label">Active Internship</span>
+              </div>
+              <div class="quick-stat">
+                <span class="stat-value">5+</span>
+                <span class="stat-label">Production Apps</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero 3D Holographic Card (Profile Showcase) -->
+          <div class="hero-visual">
+            <div class="card-3d-wrapper">
+              
+              <!-- Floating Badge 1: Hackathon Winner -->
+              <div class="card-floating-badge badge-top-left">
+                <div class="badge-icon badge-gold">
+                  <i data-lucide="award" style="width: 18px; height: 18px;"></i>
+                </div>
+                <div>
+                  <div class="badge-text-primary">National Winner</div>
+                  <div class="badge-text-sub">MIIT Hack Fusion 1.0</div>
+                </div>
+              </div>
+
+              <!-- Floating Badge 2: Mphasis Intern -->
+              <div class="card-floating-badge badge-bottom-right">
+                <div class="badge-icon badge-emerald">
+                  <i data-lucide="briefcase" style="width: 18px; height: 18px;"></i>
+                </div>
+                <div>
+                  <div class="badge-text-primary">Intern @ Mphasis</div>
+                  <div class="badge-text-sub">Bengaluru, India</div>
+                </div>
+              </div>
+
+              <!-- Main Card Body -->
+              <div class="card-3d">
+                <div class="card-glow-edge"></div>
+                <div class="card-tech-corners"></div>
+
+                <div class="card-photo-container">
+                  <img src="assets/profile_card.jpg" alt="Jagannath Nayak" class="card-photo">
+                  <div class="card-holo-overlay"></div>
+                </div>
+
+                <div class="card-info">
+                  <div class="card-identity">
+                    <span class="card-name">Jagannath Nayak</span>
+                    <span class="card-verified">
+                      <i data-lucide="check-circle-2" style="width: 12px; height: 12px;"></i> Verified
+                    </span>
+                  </div>
+                  <div class="card-sub">
+                    <i data-lucide="map-pin" style="width: 14px; height: 14px; color: var(--primary);"></i>
+                    <span>Bengaluru, India • KSIT (2023 - 2027)</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Experience & Education Section
+         ========================================================================== -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <i data-lucide="briefcase" style="width: 14px; height: 14px;"></i> Career Journey
+          </div>
+          <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+          <p class="section-desc">
+            Bridging academic rigor at KS Institute of Technology with real-world engineering at Mphasis.
+          </p>
+        </div>
+
+        <div class="exp-grid">
+          
+          <!-- Experience Column -->
+          <div class="exp-column">
+            <h3 class="exp-column-title">
+              <i data-lucide="cpu"></i> Professional Experience
+            </h3>
+
+            <div class="timeline">
+              <!-- Mphasis Internship Card -->
+              <div class="timeline-card active-role">
+                <div class="timeline-marker"></div>
+                <div class="timeline-header">
+                  <span class="timeline-role">Software Engineering Intern</span>
+                  <span class="timeline-tag tag-active">Currently Active</span>
+                </div>
+                <div class="timeline-company">
+                  <i data-lucide="building-2" style="width: 16px; height: 16px;"></i>
+                  <span>Mphasis • Bengaluru, India</span>
+                </div>
+                <p class="timeline-body">
+                  Contributing as an active intern at Mphasis, collaborating on enterprise software engineering, scalable architectures, and modern application development.
+                </p>
+                <ul class="timeline-highlights">
+                  <li>Engaging in full-stack feature development and code quality reviews.</li>
+                  <li>Applying software engineering best practices, agile workflows, and collaborative problem-solving.</li>
+                  <li>Deepening expertise in production-grade systems and enterprise tools.</li>
+                </ul>
+              </div>
+
+              <!-- Dyashin Technosoft Internship Recognition -->
+              <div class="timeline-card">
+                <div class="timeline-marker"></div>
+                <div class="timeline-header">
+                  <span class="timeline-role">Internship Recognition Offer</span>
+                  <span class="timeline-tag">Hackathon Honor</span>
+                </div>
+                <div class="timeline-company">
+                  <i data-lucide="sparkles" style="width: 16px; height: 16px;"></i>
+                  <span>Dyashin Technosoft / DSEdify</span>
+                </div>
+                <p class="timeline-body">
+                  Awarded a 2–4 month industry internship opportunity by Dyashin Technosoft following 2nd place runner-up recognition at the National Level HIRE-4-THON for an adaptive AI-based automated quiz generation platform.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Column -->
+          <div class="exp-column">
+            <h3 class="exp-column-title">
+              <i data-lucide="graduation-cap"></i> Academic Foundation
+            </h3>
+
+            <div class="timeline">
+              <!-- KSIT BE CSD -->
+              <div class="timeline-card">
+                <div class="timeline-marker"></div>
+                <div class="timeline-header">
+                  <span class="timeline-role">B.E. in Computer Science & Design</span>
+                  <span class="timeline-tag">2023 – 2027</span>
+                </div>
+                <div class="timeline-company">
+                  <i data-lucide="school" style="width: 16px; height: 16px;"></i>
+                  <span>K S Institute of Technology • Bengaluru</span>
+                </div>
+                <p class="timeline-body">
+                  Specializing in the intersection of core computer science fundamentals (data structures, algorithms, databases, OOP) and human-centered design (UI/UX, interactive computing, product engineering).
+                </p>
+                <ul class="timeline-highlights">
+                  <li>Leader in collegiate hackathon teams and project showcases.</li>
+                  <li>Core coursework: OOP, DBMS, Machine Learning, Web Tech, Software Design.</li>
+                </ul>
+              </div>
+
+              <!-- Higher Secondary -->
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-role">CBSE Class XI & XII (Science)</span>
+                  <span class="timeline-tag">2021 – 2023</span>
+                </div>
+                <div class="timeline-company">
+                  <i data-lucide="book-open" style="width: 16px; height: 16px;"></i>
+                  <span>Infocus India Public School • Bengaluru</span>
+                </div>
+                <p class="timeline-body">
+                  Completed Higher Secondary Education focusing on Physics, Chemistry, Mathematics, and Computer Science with solid analytical and problem-solving grounding.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Projects Section
+         ========================================================================== -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <i data-lucide="code-2" style="width: 14px; height: 14px;"></i> Portfolio Showcase
+          </div>
+          <h2 class="section-title">Engineered <span class="gradient-text">Projects</span></h2>
+          <p class="section-desc">
+            Production-grade software platforms, AI/ML intelligent systems, and IoT healthcare solutions.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Systems (5)</button>
+          <button class="filter-btn" data-filter="aiml">AI / ML & RAG</button>
+          <button class="filter-btn" data-filter="web">Full Stack Web</button>
+          <button class="filter-btn" data-filter="iot">IoT & Embedded</button>
+        </div>
+
+        <!-- Dynamic Projects Grid -->
+        <div id="projects-grid" class="projects-grid">
+          <!-- Populated by js/main.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <i data-lucide="github" style="width: 18px; height: 18px;"></i>
+            <span>Explore More on GitHub (@jagannath2908)</span>
+            <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Achievements & Honors Section
+         ========================================================================== -->
+    <section id="achievements" class="achievements-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge" style="background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3); color: #fbbf24;">
+            <i data-lucide="trophy" style="width: 14px; height: 14px;"></i> National Honors
+          </div>
+          <h2 class="section-title">Hackathon <span class="gradient-gold">Achievements</span></h2>
+          <p class="section-desc">
+            Proven track record of winning competitive national hackathons with innovative technical execution.
+          </p>
+        </div>
+
+        <div class="achievements-grid">
+          
+          <!-- Winner: Hack Fusion 1.0 -->
+          <div class="achievement-card">
+            <div class="achievement-banner">
+              <span class="trophy-badge">
+                <i data-lucide="trophy" style="width: 16px; height: 16px;"></i> 1ST PLACE WINNER
+              </span>
+              <span class="achievement-date">September 2025</span>
+            </div>
+
+            <h3 class="achievement-title">National Level Hackathon Winner — Hack Fusion 1.0</h3>
+            
+            <div class="achievement-org">
+              <i data-lucide="map-pin" style="width: 14px; height: 14px;"></i>
+              <span>Maharaja Institute of Technology (MIIT), Mysuru</span>
+            </div>
+
+            <p class="achievement-desc">
+              Developed an <strong>AI-driven wardroom automation and wound analysis system</strong> combining IoT telemetry with deep learning vision to accurately segment wounds and track healing rates for enhanced patient recovery.
+            </p>
+
+            <!-- Interactive Certificate Box -->
+            <div class="cert-preview-box" onclick="openCertModal('hackfusion')">
+              <img src="assets/cert_hackfusion.png" alt="MIIT Hack Fusion 1.0 First Place Certificate" class="cert-preview-img">
+              <div class="cert-preview-overlay">
+                <span class="cert-zoom-btn">
+                  <i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i> Inspect Certificate
+                </span>
+                <span style="font-size: 0.75rem; color: #cbd5e1;">Click for high-resolution view</span>
+              </div>
+            </div>
+
+            <div class="achievement-footer">
+              <div class="verified-stamp">
+                <i data-lucide="check-circle" style="width: 16px; height: 16px;"></i>
+                <span>Official First Place Certificate</span>
+              </div>
+              <button class="btn-inspect" onclick="openCertModal('hackfusion')">
+                View Details <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Runner Up: HIRE-4-THON -->
+          <div class="achievement-card runner-up">
+            <div class="achievement-banner">
+              <span class="trophy-badge runner-badge">
+                <i data-lucide="medal" style="width: 16px; height: 16px;"></i> 2ND PLACE RUNNER-UP
+              </span>
+              <span class="achievement-date">March 2026</span>
+            </div>
+
+            <h3 class="achievement-title">National Level Hackathon Runner-up — HIRE-4-THON</h3>
+            
+            <div class="achievement-org">
+              <i data-lucide="map-pin" style="width: 14px; height: 14px;"></i>
+              <span>K S School of Engineering & Management (KSSEM) in Collab with Dyashin Technosoft</span>
+            </div>
+
+            <p class="achievement-desc">
+              Engineered an <strong>adaptive AI-based automated quiz generator</strong> with live intelligent scoring. Recognized with a prestigious 2–4 month industry internship offer at Dyashin Technosoft.
+            </p>
+
+            <!-- Interactive Certificate Box -->
+            <div class="cert-preview-box" onclick="openCertModal('hire4thon')">
+              <img src="assets/cert_hire4thon.jpg" alt="HIRE-4-THON Runner-up Certificate" class="cert-preview-img">
+              <div class="cert-preview-overlay">
+                <span class="cert-zoom-btn">
+                  <i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i> Inspect Certificate
+                </span>
+                <span style="font-size: 0.75rem; color: #cbd5e1;">Click for high-resolution view</span>
+              </div>
+            </div>
+
+            <div class="achievement-footer">
+              <div class="verified-stamp">
+                <i data-lucide="check-circle" style="width: 16px; height: 16px;"></i>
+                <span>Official Runner's Certificate + Internship</span>
+              </div>
+              <button class="btn-inspect" onclick="openCertModal('hire4thon')">
+                View Details <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Technical Skills Matrix Section
+         ========================================================================== -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <i data-lucide="cpu" style="width: 14px; height: 14px;"></i> Arsenal
+          </div>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <p class="section-desc">
+            Core proficiencies spanning artificial intelligence, full-stack architectures, databases, and UI/UX engineering.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Languages & Core -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon icon-cyan">
+                <i data-lucide="terminal"></i>
+              </div>
+              <h3 class="skill-cat-title">Programming Languages</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-row">
+                <div class="skill-name-bar">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-level-text">Advanced</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-cyan" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-name-bar">
+                  <span class="skill-name">Java</span>
+                  <span class="skill-level-text">Proficient</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-cyan" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-name-bar">
+                  <span class="skill-name">JavaScript / HTML5 / CSS3</span>
+                  <span class="skill-level-text">Modern Web</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-cyan" style="width: 88%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: AI / ML & Intelligent Systems -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon icon-purple">
+                <i data-lucide="brain"></i>
+              </div>
+              <h3 class="skill-cat-title">AI / ML & Agentic Systems</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-row">
+                <div class="skill-name-bar">
+                  <span class="skill-name">RAG & Vector DBs (FAISS/Pinecone)</span>
+                  <span class="skill-level-text">Advanced</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-purple" style="width: 92%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-name-bar">
+                  <span class="skill-name">LLMs & Prompt Engineering</span>
+                  <span class="skill-level-text">Proficient</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-purple" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-name-bar">
+                  <span class="skill-name">Machine Learning & Computer Vision</span>
+                  <span class="skill-level-text">Practical</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-purple" style="width: 82%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Databases & Backend -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon icon-emerald">
+                <i data-lucide="database"></i>
+              </div>
+              <h3 class="skill-cat-title">Backend & Databases</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-row">
+                <div class="skill-name-bar">
+                  <span class="skill-name">PostgreSQL & MySQL</span>
+                  <span class="skill-level-text">Relational DBMS</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-emerald" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-name-bar">
+                  <span class="skill-name">Python Flask & SQLAlchemy</span>
+                  <span class="skill-level-text">Full Stack</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-emerald" style="width: 86%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-name-bar">
+                  <span class="skill-name">RESTful APIs & Microservices</span>
+                  <span class="skill-level-text">Integration</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-emerald" style="width: 84%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Tools, DevOps & UI/UX -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon icon-amber">
+                <i data-lucide="layers"></i>
+              </div>
+              <h3 class="skill-cat-title">Dev Tools & UI/UX</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-row">
+                <div class="skill-name-bar">
+                  <span class="skill-name">Git, GitHub & Jira</span>
+                  <span class="skill-level-text">Version Control</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-amber" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-name-bar">
+                  <span class="skill-name">UI/UX & Product Design Thinking</span>
+                  <span class="skill-level-text">CS & Design</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-amber" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-name-bar">
+                  <span class="skill-name">CI/CD & Cloud Deployment (Render)</span>
+                  <span class="skill-level-text">DevOps</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-amber" style="width: 80%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Resume Preview Banner
+         ========================================================================== -->
+    <section class="resume-section">
+      <div class="container">
+        <div class="resume-card">
+          <div class="resume-details">
+            <div class="section-badge">
+              <i data-lucide="file-check" style="width: 14px; height: 14px;"></i> Verified Curriculum Vitae
+            </div>
+            <h3>Looking for an Agile, Driven Software Engineer?</h3>
+            <p>
+              Download or view my full verified resume with complete details of coursework, internships, hackathon awards, and engineering projects.
+            </p>
+            <div class="resume-actions">
+              <button class="btn-primary" onclick="openResumeModal()">
+                <i data-lucide="eye" style="width: 18px; height: 18px;"></i>
+                <span>Inspect Resume Online</span>
+              </button>
+              <a href="assets/resume_preview.png" download="Jagannath_Nayak_Resume.png" class="btn-secondary">
+                <i data-lucide="download" style="width: 18px; height: 18px;"></i>
+                <span>Download Resume</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="resume-preview-container" onclick="openResumeModal()" title="Click to expand resume">
+            <img src="assets/resume_preview.png" alt="Jagannath Nayak Resume Preview" class="resume-preview-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Contact Section
+         ========================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <i data-lucide="mail" style="width: 14px; height: 14px;"></i> Get In Touch
+          </div>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+          <p class="section-desc">
+            Currently open to opportunities in Software Development, AI/ML Engineering, and UI/UX Design.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Channels -->
+          <div class="contact-card">
+            <h3 style="font-size: 1.45rem; color: #fff; margin-bottom: 0.5rem;">Connect Directly</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Feel free to reach out via email, phone, LinkedIn, or explore my code on GitHub.
+            </p>
+
+            <div class="contact-channels">
+              
+              <!-- GitHub -->
+              <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="channel-link">
+                <div class="channel-icon">
+                  <i data-lucide="github"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">GitHub Repository Hub</span>
+                  <span class="channel-value">github.com/jagannath2908</span>
+                </div>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/jagannath-nayak" target="_blank" rel="noopener noreferrer" class="channel-link">
+                <div class="channel-icon" style="color: #38bdf8;">
+                  <i data-lucide="linkedin"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">LinkedIn Network</span>
+                  <span class="channel-value">linkedin.com/in/jagannath-nayak</span>
+                </div>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:jagannathnayak865@gmail.com" class="channel-link">
+                <div class="channel-icon" style="color: #34d399;">
+                  <i data-lucide="mail"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">Direct Email</span>
+                  <span class="channel-value">jagannathnayak865@gmail.com</span>
+                </div>
+              </a>
+
+              <!-- Phone -->
+              <a href="tel:+916291884501" class="channel-link">
+                <div class="channel-icon" style="color: #fbbf24;">
+                  <i data-lucide="phone"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">Phone / WhatsApp</span>
+                  <span class="channel-value">+91 6291884501</span>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <div class="channel-link" style="cursor: default;">
+                <div class="channel-icon" style="color: #ec4899;">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">Location</span>
+                  <span class="channel-value">Bengaluru, Karnataka, India</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Message Form -->
+          <div class="contact-card">
+            <h3 style="font-size: 1.45rem; color: #fff; margin-bottom: 0.5rem;">Send a Direct Message</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+              Have a question or collaboration proposal? Send a note below.
+            </p>
+
+            <form id="portfolio-contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name</label>
+                <input type="text" id="contact-name" required class="form-input" placeholder="e.g. Alex Henderson">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address</label>
+                <input type="email" id="contact-email" required class="form-input" placeholder="e.g. alex@company.com">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject</label>
+                <input type="text" id="contact-subject" required class="form-input" placeholder="Internship / Project Collaboration / Inquiry">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea id="contact-message" required class="form-textarea" placeholder="Hi Jagannath, I'd like to discuss..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+                <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+                <span>Transmit Message</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="brand-badge" style="margin-bottom: 0.5rem;">
+          <img src="assets/profile_avatar.jpg" alt="Jagannath Nayak" class="brand-avatar">
+          <span>Jagannath <span class="gradient-text">Nayak</span></span>
+        </a>
+        <p>© 2026 Jagannath Nayak. Crafted with 3D WebGL, modern UI/UX design, and passion.</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/jagannath2908" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="https://linkedin.com/in/jagannath-nayak" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="mailto:jagannathnayak865@gmail.com" class="icon-btn" title="Email">
+          <i data-lucide="mail"></i>
+        </a>
+        <a href="#hero" class="icon-btn" title="Back to top">
+          <i data-lucide="arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Modals: Project Detail, Certificate Zoom, Resume Viewer
+       ========================================================================== -->
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal-overlay" onclick="if(event.target === this) closeAllModals()">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeAllModals()" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div id="project-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Certificate Modal -->
+  <div id="cert-modal" class="modal-overlay" onclick="if(event.target === this) closeAllModals()">
+    <div class="modal-container" style="max-width: 820px;">
+      <button class="modal-close-btn" onclick="closeAllModals()" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div id="cert-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Resume Modal -->
+  <div id="resume-modal" class="modal-overlay" onclick="if(event.target === this) closeAllModals()">
+    <div class="modal-container" style="max-width: 840px;">
+      <button class="modal-close-btn" onclick="closeAllModals()" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <h2 style="font-size: 1.85rem; color: #fff; font-weight: 800;">Curriculum Vitae</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Jagannath Nayak • Software Engineering Intern @ Mphasis</p>
+      </div>
+      <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--border-glass); margin-bottom: 1.5rem; background: #fff; box-shadow: 0 15px 35px rgba(0,0,0,0.7);">
+        <img src="assets/resume_preview.png" alt="Jagannath Nayak Resume" style="width: 100%; display: block;">
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <a href="assets/resume_preview.png" download="Jagannath_Nayak_Resume.png" class="btn-primary">
+          <i data-lucide="download" style="width: 18px; height: 18px;"></i> Download Resume
+        </a>
+        <button class="btn-secondary" onclick="closeAllModals()">Close Preview</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/vendor/three.min.js"></script>
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lucide.min.js"></script>
+
+  <script src="js/audio.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/transitions.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
